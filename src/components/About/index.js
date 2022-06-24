@@ -15,7 +15,7 @@ const About = () => {
     <>
     <AboutContainer>
           <AboutContent>
-            <AboutH1>About me</AboutH1>
+            <AboutH1>About me.</AboutH1>
               <AboutP>
                 <b>Monica Del Valle | Software Developer</b><br /><br />
                 As an aspiring bioinformatician I design and develop full stack web applications 
