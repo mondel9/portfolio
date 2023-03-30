@@ -1,38 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 
 :root {
-  --plum-bg: #ECE9EC;/*#f5f5f5;*/
-  --plum-mid: #cabec6;
-  --plum-deep: #554550;
-
-  --orange-bg: #FCF4ED;/*#fdfbf9;*/
-  --yellow-orange: #ffdaa5;
-  --soft-orange: #ff8247;
-  --bright-orange: #ff5708;
-  --burgundy: #4e0110;
-  --brown-deep: #47280b;
-
-  --green-bg: #f7f8f9;
-  --green-deep: #1c494c;
-  --teal-lite: #73cadc;
-  --seafoam: #9bdabe;
-
-  --gray: #919795;
+  --bg: #ffffff;
+  --light-blue: #e0e8ea;
+  --text: #2f2f2f;
+  --subtext: #4e4e4e;
+  --accent: #4242d1;
+  --shadow: #b2babc;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Barlow', sans-serif;
 }
 
-/*@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pad {
+  padding-left: 11.175vw;
+  padding-right: 11.175vw;
+}
+
+.auto {
+  text-justify: auto;
+}
+
+.section-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.portfolio-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: var(--light-blue);
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .project-title {
+    padding: 3rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
+} 
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.hero-gradient {
+  background-color:hsla(274,0%,100%,1);
+  background-image:
+  radial-gradient(at 46% 84%, rgb(226, 218, 251) 0px, transparent 50%),
+  radial-gradient(at 62% 27%, hsla(12,87%,85%,1) 0px, transparent 50%),
+  radial-gradient(at 18% 82%, hsla(55,64%,85%,1) 0px, transparent 50%),
+  radial-gradient(at 72% 44%, hsla(114,60%,85%,1) 0px, transparent 50%),
+  radial-gradient(at 10% 40%, hsla(183,96%,85%,1) 0px, transparent 50%),
+  radial-gradient(at 26% 61%, hsla(69,86%,85%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 62%, hsla(66,72%,85%,1) 0px, transparent 50%);
+}
+
+.hero-pink-gradient {
+  left: -17%;
+  top: -7%;
+  right: auto;
+  bottom: auto;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  background-color: rgba(255, 207, 253, 0.5);
+  -webkit-filter: blur(180px);
+  filter: blur(180px);
+}
+

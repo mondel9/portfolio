@@ -1,50 +1,38 @@
 import React from 'react';
+import { Grid } from '@mui/material';
 import {
   ProjectContainer,
   ProjectWrapper,
-  ProjectRow,
-  Column1, 
-  Column2,
-  TextWrapper,
-  Heading,
-  Subtitle,
-  Body,
-  Link,
+  ProjectTitle,
+  ProjectBody,
+  InlineLink,
   ImgWrap,
-  Img,
-  ProjectBtnWrap,
-  ProjectBtn
+  ProjectImg,
+  ToolList
 } from './ProjectElements';
 
 
-const Project = ({id, imgStart, heading, img, alt}) => {
+const Project = ({id, title, body, link, href, tools, img, alt}) => {
   return (
     <>
-      <ProjectContainer id={id}>
+      <ProjectContainer id={id} className='pad'>
         <ProjectWrapper>
-          <ProjectRow imgStart={imgStart}>
-            <Column1>
-            <TextWrapper>
-              <Heading>{heading}</Heading>
-              <Body>Web application for the <Link href=''>MuSyC algorithm</Link> to fit dose response surfaces and manage drug 
-                combination experiment data. Designed an easy-to-use, modern user interface 
-                using Bootstrap and HTML/CSS. Added datas haring and visualization features 
-                using various Python libraries.</Body>
-            </TextWrapper>
-            <ProjectBtnWrap>
-              <ProjectBtn>View Site</ProjectBtn>
-              <ProjectBtn>Source Code</ProjectBtn>
-            </ProjectBtnWrap>
-            </Column1>
-            <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
-            </Column2>
-          </ProjectRow>
+          <Grid container justifyContent="center" alignItems="center" 
+                rowSpacing={2} columnSpacing={{ xs: 3, sm: 4, md: 6 }}>
+          <Grid item xs={12} md={5}>
+            <ProjectTitle>{title}</ProjectTitle>
+            <ProjectBody className='auto'>{body}</ProjectBody>
+            <InlineLink href={href} target="_blank">{link}</InlineLink>
+          </Grid>
+          <Grid item xs={12} md={7}>
+            <ImgWrap>
+              <ProjectImg src={img} alt={alt} />
+            </ImgWrap>
+            <ToolList>{tools}</ToolList>
+          </Grid>
+          </Grid>
         </ProjectWrapper>
       </ProjectContainer>
-    
     </>
   );
 };

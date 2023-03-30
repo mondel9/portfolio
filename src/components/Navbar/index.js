@@ -1,35 +1,61 @@
 import React from 'react';
-import { FaBars } from 'react-icons/fa';
+import logo from '../../images/logo.jpg'
+import { IoMenuOutline } from 'react-icons/io5';
 import { 
-  Nav, 
-  NavbarContainer, 
+  Nav,  
   NavLogo,
   MobileIcon, 
   NavMenu, 
   NavItem, 
-  NavLinks } from './NavbarElements';
+  NavLinks,
+} from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavbarContainer>
-          <NavLogo to='/'>Monica</NavLogo>
+          <NavLogo src={logo} alt="logo"/>
           <MobileIcon onClick={toggle}>
-            <FaBars />
+            <IoMenuOutline />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about'>About</NavLinks>
+              <NavLinks 
+                to="home"
+                smooth={true} 
+                duration={500} 
+                spy={true} 
+                exact={"true"}
+              >Home</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='projects'>Projects</NavLinks>
+              <NavLinks 
+                to="about" 
+                smooth={true} 
+                duration={500} 
+                spy={true} 
+                exact={true}
+              >About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='research'>Research</NavLinks>
+              <NavLinks 
+                to="portfolio"
+                smooth={true} 
+                duration={500} 
+                spy={true} 
+                exact={true}
+              >Portfolio</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks 
+                to="contact"
+                smooth={true} 
+                duration={500} 
+                spy={true} 
+                exact={true}
+              >Contact</NavLinks>
             </NavItem>
           </NavMenu>
-        </NavbarContainer>
       </Nav>
     </>
   );

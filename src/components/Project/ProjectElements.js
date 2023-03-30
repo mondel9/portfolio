@@ -1,125 +1,64 @@
 import styled from "styled-components";
 
-export const ProjectContainer = styled.div`
-  color: var(--brown-deep);
-  background: var(--orange-bg);
 
+export const ProjectContainer = styled.section`
+  padding-bottom: 3rem;
+  background-color: var(--light-blue);
+  
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
+    padding: 3rem 2rem;
+  } 
 `
 
 export const ProjectWrapper = styled.div`
   display: grid;
-  z-index: 1;
-  height: 860px;
   width: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 250px 24px;
-  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 3rem;
+  padding: 3rem;
+  box-shadow: 1px 1px 2px var(--shadow);
 `
 
-export const ProjectRow = styled.div`
-  display: grid;
-  grid-auto-column: minmax(auto, 1fr);
-  grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1` : `'col1 col2'`)};
-
-  @media screen and (max-width: 768px) {
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-  }
-`
-
-export const Column1 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col1;
-`
-
-export const Column2 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col2;
-`
-
-export const TextWrapper = styled.div`
-  max-width: 540px;
-  padding-top: 0;
-  padding-bottom: 20px;
-`
-
-export const Heading = styled.h1`
-  color: var(--brown-deep);
-  font-size: 2.5rem;
-  line-height: 1.125;
-  font-weight: 700;
+export const ProjectTitle = styled.h2`
+  font-size: 2rem;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 2rem;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
 `
 
-export const Subtitle = styled.p`
-  color: var(--bright-orange);
-  max-width: 440px;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  font-size: 18px;
+export const ProjectBody = styled.p`
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin: 1rem 0;
 `
 
-export const Body = styled.p`
+export const InlineLink = styled.a`
   font-size: 1.2rem;
-  line-height: 1.65;
-  margin: 25px auto;
-  font-family: 'Roboto', sans-serif;
-`
-
-export const Link = styled.a`
-  color: var(--brown-deep);
-  font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.65;
-  margin: 25px auto;
-  font-family: 'Roboto', sans-serif;
-  border-bottom: .125em solid var(--yellow-orange);
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
   text-decoration: none;
-`
-
-export const ProjectBtnWrap = styled.div`
-  display: flex;
-  margin-top: 18px;
-`
-
-export const ProjectBtn = styled.button`
-  border-radius: 50px;
-  background: var(--soft-orange);
-  white-space: nowrap;
-  margin-right: 18px;
-  padding: 16px 24px;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-align: center;
-  outline: none;
-  border: none;
   cursor: pointer;
-  text-decoration: none;
-  overflow: hidden;
-
-  &:hover {
-    background: var(--bright-orange);
-    color: white;
-  }
 `
 
 export const ImgWrap = styled.div`
-  max-width: 555px;
-  height: 100%;
+  display: flex;
+  /*height: 30rem;*/
+  justify-content: center;
+  overflow: hidden;
+
 `
 
-export const Img = styled.img`
+export const ProjectImg = styled.img`
+  object-fit: contain;
   width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0; 
+`
+
+export const ToolList = styled.p`
+  font-size: 1.1rem;
+  color: var(--accent);
+  padding: 1rem 0;
 `
