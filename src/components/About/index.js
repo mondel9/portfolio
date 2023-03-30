@@ -11,23 +11,6 @@ import {
 const About = () => {
   return (
     <>
-<<<<<<< HEAD
-    <AboutContainer>
-          <AboutContent>
-            <AboutH1>About me.</AboutH1>
-              <AboutP>
-                <b>Monica Del Valle | Software Developer</b><br /><br />
-                As an aspiring bioinformatician I design and develop full stack web applications 
-                with a special interest in creating useful tools for analyzing and viewing biomedical data.
-              </AboutP>
-              <AboutBtnWrap>
-                <AboutBtn>Github</AboutBtn>
-                <AboutBtn>LinkedIn</AboutBtn>
-              </AboutBtnWrap>
-          </AboutContent>
-    </AboutContainer>
-    <AboutAngle></AboutAngle>
-=======
       <AboutContainer id="about" className="pad">
         <Grid container alignItems="center"
           rowSpacing={2} columnSpacing={{ xs: 3, sm: 4, md: 12 }}>
@@ -49,7 +32,6 @@ const About = () => {
           </Grid>
         </Grid>
       </AboutContainer>
->>>>>>> update build for gh-pages
     </>
   );
 };
